@@ -8,7 +8,7 @@
        </div>
        <div class="col-sm-9">
            <div class="d-flex pb-2">
-               <h4 class="pr-5">Monstergram</h4>
+               <h4 class="pr-5">{{ $user->username }}</h4>
                <button class="btn btn-primary btn-sm"> Follow</button>
            </div>
            <div class="d-flex pb-3">
