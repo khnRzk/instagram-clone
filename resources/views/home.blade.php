@@ -9,7 +9,8 @@
        <div class="col-sm-9">
            <div class="d-flex pb-2">
                <h4 class="pr-5">{{ $user->username }}</h4>
-               <button class="btn btn-primary btn-sm"> Follow</button>
+               <button class="btn btn-primary btn-sm mr-1"> Follow</button>
+               <button class="btn btn-primary btn-sm">Add new post</button>
            </div>
            <div class="d-flex pb-3">
                 <div class="pr-5"><strong>123</strong> Posts</div>
@@ -17,13 +18,13 @@
                 <div class="pr-5"><strong>123</strong> Following</div>
            </div>
            <div>
-               <span><b>monstergram.org</b></span>
+               <span><b>{{ $user->profile->title ?? 'Hi' }}</b></span>
                <p>
-                We're a global community of millions of people learning to code together. We're an open source, donor-supported, 501(c)(3) nonprofit.
+                {{ $user->profile->description ?? 'Hi' }}
                </p>
            </div>
            <div>
-               <a href="" style="text-decoration: none">www.monstergram.org</a>
+               <a href="" style="text-decoration: none">{{ $user->profile->url ?? 'Hi'  }}</a>
            </div>
        </div>
    </div>
