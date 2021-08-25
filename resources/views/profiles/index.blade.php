@@ -9,8 +9,8 @@
        <div class="col-sm-9">
            <div class="d-flex pb-2">
                <h4 class="pr-5">{{ $user->username }}</h4>
-               <button class="btn btn-primary btn-sm mr-1"> Follow</button>
-               <button class="btn btn-primary btn-sm">Add new post</button>
+               <button class="btn btn-primary mr-1"> Follow</button>
+               <a class="btn btn-primary" href="/p/create">Add new post</a>
            </div>
            <div class="d-flex pb-3">
                 <div class="pr-5"><strong>123</strong> Posts</div>
@@ -30,15 +30,14 @@
    </div>
    <hr>
    <div class="row pt-3">
-       <div class="col-sm-4">
-           <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" class="w-100">
-       </div>
-       <div class="col-sm-4">
-            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" class="w-100">
-        </div>
-        <div class="col-sm-4">
-            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" class="w-100">
-        </div>
+
+    @foreach ($user->posts as $post)
+    <div class="col-sm-4">
+        <img src="/storage/{{ $post->image }}" class="w-100">
+    </div> 
+    @endforeach
+       
+       
 
    </div>
 </div>
