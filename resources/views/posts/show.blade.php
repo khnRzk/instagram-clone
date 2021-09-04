@@ -11,8 +11,26 @@
                         <img src="/storage/{{ $post->image }}" class="w-100 rounded">
                     </div>
                     <div class="col-sm-6">
-                        <h5>{{ $post->user->username }}</h5>
-                        <p>{{ $post->caption }}</p>
+                        <div class="d-flex align-items-center pt-2">
+                            <div>
+                                <img src="{{ $post->user->profile->ProfileImage() }}" alt="" class="rounded-circle" style="width:50px">
+                            </div>
+                            <div class="pl-3">
+                                <h6>
+                                    <strong>
+                                        <a href="/profile/{{ $post->user->id }}" style="text-decoration: none; color:black">{{ $post->user->username }}</a>
+                                    </strong> | 
+                                    <strong><a href="#">Follow</a></strong>
+                                </h6>
+                            </div>
+                            <div>
+                                
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <p><span><strong><a href="/profile/{{ $post->user->id }}" style="text-decoration: none; color:black">{{ $post->user->username }}</a></strong></span> {{ $post->caption }}</p>
+                        </div>
                     </div>
                 </div>
             </div>     
