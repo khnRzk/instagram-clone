@@ -9,5 +9,5 @@ Simple clone version of Instagram with Laravel
 - View Single posts
 - Upload Image
 
-
+Youtube Link : https://youtu.be/-jO0WC86K5U
 
